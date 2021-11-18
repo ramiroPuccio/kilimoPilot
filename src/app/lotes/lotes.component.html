@@ -29,7 +29,7 @@
                     <div class="row mb-2">
                         <label for="inputWater" class="col-sm-5 col-form-label">Riegos acumulados</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control" min="0" id="inputWater" (change)="userInputWater($event.target.value, currentPlot)" value=0>
+                            <input type="number" class="form-control" min="0" step="0.1" id="inputWater" (change)="userInputWater($event.target.value, currentPlot)" value=0>
                         </div>
                     </div>
                     <div *ngIf="riegoSugerido >= 0" class="row mb-2">
