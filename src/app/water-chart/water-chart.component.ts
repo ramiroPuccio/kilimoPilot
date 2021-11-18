@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { positionElements } from '@ng-bootstrap/ng-bootstrap/util/positioning';
 import { Chart } from "chart.js"
 
 @Component({
