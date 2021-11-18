@@ -29,9 +29,9 @@ export class WaterChartComponent implements OnChanges {
           label: 'label 1',
           data: [ (this.currentPlot.rains.reduce((a, b) => parseFloat(a) + parseFloat(b), 0)),parseFloat(this.currentPlot.irrigations),parseFloat(this.riegoSugerido)],
           backgroundColor: [
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.4)',
-            'rgba(255, 0, 0, 0.6)'
+            'rgba(54, 162, 235, 0.7)',
+            'rgba(0,255,0,0.7)',
+            'rgba(255, 0, 0, 0.1)'
           ]
         }],
         labels: ['Precipitaciones '+ (this.currentPlot.rains.reduce((a, b) => parseFloat(a) + parseFloat(b), 0)).toFixed(2) +' mm','Riegos Acumulados '+ this.currentPlot.irrigations +' mm','Riego Sugerido '+ this.riegoSugerido +' mm']
