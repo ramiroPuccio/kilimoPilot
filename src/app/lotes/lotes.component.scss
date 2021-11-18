@@ -1,0 +1,22 @@
+h3.lotes-title{
+    color: white;
+}
+h4.lote-title{
+    margin: 10px;
+    color: white;
+}
+.lote-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+  p {
+    text-align: center;
+  }
+  .card {
+    margin: 20px;
+}
+  canvas{
+    height: 100%;
+  }

@@ -1,0 +1,51 @@
+<div class="lotes-wrapper">
+    <h3 class="lotes-title">Mis Lotes</h3>
+    <select  (change)="selectPlot($event.target.value)" class="form-select" ng-model="plotId">
+        <option selected>Seleccione un lote</option>
+        <option *ngFor="let plot of plots" [value]="plot.id">{{plot.name}} - {{plot.farm_name}}</option>
+    </select>
+</div>
+
+<div *ngIf="currentPlot">
+    <!-- <app-lote></app-lote> -->
+    <div class="lote-cards">
+        <div class="card">
+            <div class="card-header">
+                Registros - {{currentPlot.name}} - {{currentPlot.farm_name}}
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row mb-2">
+                    <label class="col-sm-5 col-form-label">Agua por semana</label>
+                    <div class="col-sm-4">
+                        <p>{{currentPlot.water_per_week}} mm</p>
+                    </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label class="col-sm-5 col-form-label">Precipitaciones</label>
+                        <div class="col-sm-4">
+                            <p>{{precipitaciones}} mm</p>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="inputWater" class="col-sm-5 col-form-label">Riegos acumulados</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" id="inputWater" (change)="userInputWater($event.target.value, currentPlot)" value=0>
+                        </div>
+                    </div>
+                    <div *ngIf="riegoSugerido >= 0" class="row mb-2">
+                        <label class="col-sm-5 col-form-label">Riego Sugerido</label>
+                        <div class="col-sm-4">
+                            <p>{{riegoSugerido}} mm</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div  class="card">
+            <div class="card-body">
+                <app-water-chart [riegoSugerido]="riegoSugerido" [(currentPlot)]="currentPlot"></app-water-chart>
+            </div>
+        </div>
+    </div>
+</div>

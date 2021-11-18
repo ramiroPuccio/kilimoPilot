@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 30px;
+    background-color: white;
+}
+app-lotes.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px;
+    background-image: url("../assets/home-page-slider_trimble_33121_3063_rev_1800x700.jpg");
+    background-repeat: no-repeat;
+    
+}
