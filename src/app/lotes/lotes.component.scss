@@ -1,9 +1,8 @@
 h3.lotes-title{
     color: white;
 }
-h4.lote-title{
-    margin: 10px;
-    color: white;
+.card-header{
+  font-weight: 600;
 }
 .lote-cards{
     display: flex;
@@ -11,12 +10,12 @@ h4.lote-title{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-  p {
-    text-align: center;
-  }
-  .card {
-    margin: 20px;
+input#inputWater {
+  text-align: center;
 }
-  canvas{
-    height: 100%;
-  }
+p {
+  text-align: center;
+}
+.card {
+  margin: 20px;
+}
