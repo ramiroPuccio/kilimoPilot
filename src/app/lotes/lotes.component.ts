@@ -38,6 +38,10 @@ export class LotesComponent{
     this.inputWater = value;
     this.riegoSugerido = (parseFloat(currentPlot.water_per_week)-this.precipitaciones-this.inputWater) > 0 ? (parseFloat(currentPlot.water_per_week)-this.precipitaciones-this.inputWater).toFixed(2) : 0;
     this.currentPlot.irrigations = this.inputWater; 
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+    });
   }
 
 }
