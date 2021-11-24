@@ -39,6 +39,10 @@ export class WaterChartComponent implements OnChanges {
       options: {
         responsive: true,
         legend: {position : 'bottom',align : 'start'},
+        title: {
+              display: true,
+              text: 'Agua por semana ' + this.currentPlot.water_per_week + ' mm',
+        }
       }
     })
   }
