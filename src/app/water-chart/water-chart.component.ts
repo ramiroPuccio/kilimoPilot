@@ -20,7 +20,7 @@ export class WaterChartComponent implements OnChanges {
    }
   
   ngOnChanges() { 
-    this.currentPlot.water_per_week = this.currentPlot.water_per_week.toString();
+    
     const ctx = document.getElementById('myChart') as HTMLCanvasElement;
     new Chart(ctx, {
       type: 'doughnut',
