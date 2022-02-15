@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Chart } from "chart.js"
+import { Plot } from '../plot.model';
 
 @Component({
   selector: 'app-water-chart',
@@ -7,14 +8,8 @@ import { Chart } from "chart.js"
   styleUrls: ['./water-chart.component.scss']
 })
 export class WaterChartComponent implements OnChanges {
-  @Input() currentPlot :{"id":number,
-  "name":string,
-  "farm_name": string,
-  "crop": string,
-  "water_per_week": string,
-  "rains",
-  "irrigations", };
-  @Input() riegoSugerido:string;
+  @Input() currentPlot : Plot;
+  @Input() riegoSugerido: string;
   
   constructor() {
    }

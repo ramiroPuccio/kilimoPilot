@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LotesService } from 'src/app/lotes.service';
+import { Plot } from '../plot.model';
 @Component({
   selector: 'app-lotes',
   templateUrl: './lotes.component.html',
@@ -8,15 +9,7 @@ import { LotesService } from 'src/app/lotes.service';
 export class LotesComponent{
   plots = [];
 
-  currentPlot :  {
-    "id":number,
-    "name":string,
-    "farm_name": string,
-    "crop": string,
-    "water_per_week": string,
-    "rains",
-    "irrigations"
-  };
+  currentPlot :  Plot;
 
   precipitaciones:number;
   riegoSugerido;
